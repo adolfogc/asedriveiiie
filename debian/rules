@@ -1,0 +1,102 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+CFLAGS = -g
+
+ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
+	CFLAGS += -O0
+else
+	CFLAGS += -O2
+endif
+
+INSTALL = install
+INSTALL_PROGRAM = $(INSTALL) -p    -o root -g root  -m  755
+ifeq (,$(findstring nostrip,$(DEB_BUILD_OPTIONS)))
+	INSTALL_PROGRAM += -s
+endif
+
+version := $(shell dpkg-parsechangelog | \
+	sed -ne 's/^Version: *\([0-9]\+:\)*//p')
+
+tag:
+	cvs tag -c -F $(subst .,_,debian_version_$(version))
+
+configure: configure-stamp
+configure-stamp: patch
+	dh_testdir
+	cd asedriveiiieusb ; ./configure
+	cd asedriveiiieserial ; ./configure
+	touch configure-stamp
+
+
+build: build-stamp
+build-stamp: configure-stamp 
+	dh_testdir
+	-mkdir asedriveiiieusb/ifd-AseIIIeUSB.bundle/Contents/Linux
+	CFLAGS="$(CFLAGS)" $(MAKE) -C asedriveiiieusb
+	CFLAGS="$(CFLAGS)" $(MAKE) -C asedriveiiieserial
+	touch build-stamp
+
+patch: patch-stamp
+patch-stamp:
+	dpatch apply-all
+	touch patch-stamp
+
+unpatch:
+	dpatch deapply-all
+	rm -rf patch-stamp debian/patched
+
+clean: clean-patched unpatch
+clean-patched:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp configure-stamp
+	-$(MAKE) -C asedriveiiieusb clean
+	-$(MAKE) -C asedriveiiieserial clean
+	dh_clean 
+
+
+
+USBDIR = $(CURDIR)/debian/libasedrive-usb/usr/lib/pcsc/drivers/
+SERIALDIR = $(CURDIR)/debian/libasedrive-serial/usr/lib/pcsc/drivers/
+
+# note that the Athena source package has no "make install" target; we have 
+# to kick all the files around ourselves.
+install: build
+	dh_testdir
+	dh_testroot
+	dh_clean -k 
+	dh_installdirs
+
+	-$(MAKE) -C asedriveiiieusb install DESTDIR=`pwd`/debian/libasedrive-usb
+	rm debian/libasedrive-usb/usr/lib/pcsc/drivers/ifd-ASEDriveIIIe-USB.bundle/Contents/PkgInfo
+	rm -r debian/libasedrive-usb/usr/lib/pcsc/drivers/ifd-ASEDriveIIIe-USB.bundle/Contents/Resources
+	-$(MAKE) -C asedriveiiieserial install DESTDIR=`pwd`/debian/libasedrive-serial
+
+# Build architecture-independent files here.
+binary-indep: build install
+
+# Build architecture-dependent files here.
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs 
+	dh_installdocs
+	dh_install
+	dh_installdebconf	
+	dh_link
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_makeshlibs
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install configure patch unpatch

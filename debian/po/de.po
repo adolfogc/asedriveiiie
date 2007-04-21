@@ -1,0 +1,54 @@
+# translation of asedriveiiie_3.1-4_de.po to German
+# translation of de.po to German
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+# Jens Nachtigall <nachtigall@web.de>, 2004, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: asedriveiiie_3.1-4_de\n"
+"Report-Msgid-Bugs-To: rousseau@debian.org\n"
+"POT-Creation-Date: 2006-05-26 14:37+0200\n"
+"PO-Revision-Date: 2005-12-27 11:42+0100\n"
+"Last-Translator: Jens Nachtigall <nachtigall@web.de>\n"
+"Language-Team: German <debian-l10n-german@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+
+#. Type: select
+#. Choices
+#: ../libasedrive-serial.templates:4
+msgid "none"
+msgstr "keiner"
+
+#. Type: select
+#. Description
+#: ../libasedrive-serial.templates:5
+msgid "Communication port to use with the smart card reader:"
+msgstr ""
+"Serieller Port, der zur Kommunikation mit dem Smart-Chipkarten-Leser "
+"verwendet werden soll:"
+
+#. Type: select
+#. Description
+#: ../libasedrive-serial.templates:5
+msgid ""
+"The driver needs to know which serial port the Athena ASEDrive IIIe card "
+"reader is connected to."
+msgstr ""
+"Der Treiber muss wissen, an welcher seriellen Schnittstelle der Chipkarten-"
+"Leser Athena ASEDrive IIIe angeschlossen ist."
+

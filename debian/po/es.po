@@ -1,0 +1,60 @@
+# Translation of asedriveiiie_3.2-5.po to Spanish
+# Copyright (C) 2007 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the asedriveiiie package.
+#
+#  Traductores, si no conocen el formato PO, merece la pena leer la
+#  documentación de gettext, especialmente las secciones dedicadas a este
+#  formato, por ejemplo ejecutando:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+# Equipo de traducción al español, por favor lean antes de traducir
+# los siguientes documentos:
+#
+# - El proyecto de traducción de Debian al español
+#   http://www.debian.org/intl/spanish/
+#   especialmente las notas y normas de traducción en
+#   http://www.debian.org/intl/spanish/notas
+#
+# - La guía de traducción de po's de debconf:
+#   /usr/share/doc/po-debconf/README-trans
+#   o http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+# Si tiene dudas o consultas sobre esta traducción consulte con el último
+# traductor (campo Last-Translator) y ponga en copia a la lista de
+# traducción de Debian al español (<debian-l10n-spanish@lists.debian.org>)
+#
+# Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: asedriveiiie_3.2-5_es\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-01-13 18:50+0100\n"
+"PO-Revision-Date: 2007-03-19 18:49+0100\n"
+"Last-Translator: Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>\n"
+"Language-Team: Spanish <debian-l10n-spanish@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#. Type: select
+#. Choices
+#: ../libasedrive-serial.templates:1001
+msgid "none"
+msgstr "ninguno"
+
+#. Type: select
+#. Description
+#: ../libasedrive-serial.templates:1002
+msgid "Communication port to use with the smart card reader:"
+msgstr "Puerto de comunicaciones que usa el lector de tarjetas inteligentes:"
+
+#. Type: select
+#. Description
+#: ../libasedrive-serial.templates:1002
+msgid ""
+"The driver needs to know which serial port the Athena ASEDrive IIIe card "
+"reader is connected to."
+msgstr "El controlador necesita saber a qué puerto serie está conectado el lector de tarjetas Athena ASEDrive IIIe."
+
