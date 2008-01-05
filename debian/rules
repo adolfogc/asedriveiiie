@@ -54,7 +54,9 @@ clean-patched:
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp configure-stamp
+	touch asedriveiiieusb/Makefile.inc
 	$(MAKE) -C asedriveiiieusb clean
+	touch asedriveiiieserial/Makefile.inc
 	$(MAKE) -C asedriveiiieserial clean
 	dh_clean 
 
