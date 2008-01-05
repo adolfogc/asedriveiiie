@@ -1,0 +1,3 @@
+version=3
+http://www.athena-scs.com/downloads.asp \
+	/downloads/asedriveiiie-usb-(.*)\.tar\.bz2
