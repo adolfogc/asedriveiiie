@@ -15,8 +15,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: asedriveiiie-1.9-1\n"
-"Report-Msgid-Bugs-To: rousseau@debian.org\n"
-"POT-Creation-Date: 2006-05-26 14:37+0200\n"
+"Report-Msgid-Bugs-To: asedriveiiie@packages.debian.org\n"
+"POT-Creation-Date: 2008-01-05 17:43+0100\n"
 "PO-Revision-Date: 2005-12-04 16:08+0100\n"
 "Last-Translator: Thomas Huriaux <thomas.huriaux@gmail.com>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -26,23 +26,22 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../libasedrive-serial.templates:4
+#: ../libasedrive-serial.templates:1001
 msgid "none"
 msgstr "aucun"
 
 #. Type: select
 #. Description
-#: ../libasedrive-serial.templates:5
+#: ../libasedrive-serial.templates:1002
 msgid "Communication port to use with the smart card reader:"
 msgstr "Port de communication à utiliser avec le lecteur de carte à puce :"
 
 #. Type: select
 #. Description
-#: ../libasedrive-serial.templates:5
+#: ../libasedrive-serial.templates:1002
 msgid ""
 "The driver needs to know which serial port the Athena ASEDrive IIIe card "
 "reader is connected to."
 msgstr ""
 "Le port série sur lequel est connecté le lecteur de carte à puce ASEDrive "
 "IIIe Athena doit être connu du pilote."
-

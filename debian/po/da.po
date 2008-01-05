@@ -16,8 +16,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: asedriveiiie\n"
-"Report-Msgid-Bugs-To: rousseau@debian.org\n"
-"POT-Creation-Date: 2006-05-26 14:37+0200\n"
+"Report-Msgid-Bugs-To: asedriveiiie@packages.debian.org\n"
+"POT-Creation-Date: 2008-01-05 17:43+0100\n"
 "PO-Revision-Date: 2006-05-15 12:05+0200\n"
 "Last-Translator: Claus Hindsgaul <claus.hindsgaul@gmail.com>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
@@ -29,23 +29,22 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../libasedrive-serial.templates:4
+#: ../libasedrive-serial.templates:1001
 msgid "none"
 msgstr "ingen"
 
 #. Type: select
 #. Description
-#: ../libasedrive-serial.templates:5
+#: ../libasedrive-serial.templates:1002
 msgid "Communication port to use with the smart card reader:"
 msgstr "Kommunikationsport smartcard-læseren sluttes til:"
 
 #. Type: select
 #. Description
-#: ../libasedrive-serial.templates:5
+#: ../libasedrive-serial.templates:1002
 msgid ""
 "The driver needs to know which serial port the Athena ASEDrive IIIe card "
 "reader is connected to."
 msgstr ""
 "Driveren skal vide hvilken port Athena ASEDrive IIIe kortlæseren er "
 "tilsluttet."
-

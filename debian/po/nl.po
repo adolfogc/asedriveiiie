@@ -14,8 +14,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ifd-gempc 0.8.0-5\n"
-"Report-Msgid-Bugs-To: rousseau@debian.org\n"
-"POT-Creation-Date: 2006-05-26 14:37+0200\n"
+"Report-Msgid-Bugs-To: asedriveiiie@packages.debian.org\n"
+"POT-Creation-Date: 2008-01-05 17:43+0100\n"
 "PO-Revision-Date: 2003-09-01 22:55+0100\n"
 "Last-Translator: Tim Vandermeersch <qber66@skolelinux.no>\n"
 "Language-Team: dutch <debian-l10n-dutch@lists.debian.org>\n"
@@ -25,20 +25,20 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../libasedrive-serial.templates:4
+#: ../libasedrive-serial.templates:1001
 msgid "none"
 msgstr ""
 
 #. Type: select
 #. Description
-#: ../libasedrive-serial.templates:5
+#: ../libasedrive-serial.templates:1002
 #, fuzzy
 msgid "Communication port to use with the smart card reader:"
 msgstr "Met welke seriële poort is de smart card lezer verbonden?"
 
 #. Type: select
 #. Description
-#: ../libasedrive-serial.templates:5
+#: ../libasedrive-serial.templates:1002
 msgid ""
 "The driver needs to know which serial port the Athena ASEDrive IIIe card "
 "reader is connected to."

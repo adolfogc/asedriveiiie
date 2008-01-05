@@ -1,12 +1,12 @@
 # Vietnamese translation for asedriveiiie.
 # Copyright © 2005 Free Software Foundation, Inc.
 # Clytie Siddall <clytie@riverland.net.au>, 2005.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: asedriveiiie 2.2-1\n"
-"Report-Msgid-Bugs-To: rousseau@debian.org\n"
-"POT-Creation-Date: 2006-05-26 14:37+0200\n"
+"Report-Msgid-Bugs-To: asedriveiiie@packages.debian.org\n"
+"POT-Creation-Date: 2008-01-05 17:43+0100\n"
 "PO-Revision-Date: 2005-06-12 11:50+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
@@ -17,24 +17,23 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../libasedrive-serial.templates:4
+#: ../libasedrive-serial.templates:1001
 msgid "none"
 msgstr "không có"
 
 #. Type: select
 #. Description
-#: ../libasedrive-serial.templates:5
+#: ../libasedrive-serial.templates:1002
 #, fuzzy
 msgid "Communication port to use with the smart card reader:"
 msgstr "Máy đọc thẻ thông minh có kết nối đến cổng nối tiếp nào?"
 
 #. Type: select
 #. Description
-#: ../libasedrive-serial.templates:5
+#: ../libasedrive-serial.templates:1002
 msgid ""
 "The driver needs to know which serial port the Athena ASEDrive IIIe card "
 "reader is connected to."
 msgstr ""
 "Trình hỗ trợ thiết bị ấy cần đến bạn nhập cổng nối tiếp nơi đã kết nối máy "
 "đọc thẻ Athena ASEDrive IIIe."
-
