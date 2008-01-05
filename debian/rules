@@ -54,10 +54,9 @@ clean-patched:
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp configure-stamp
-	-$(MAKE) -C asedriveiiieusb clean
-	-$(MAKE) -C asedriveiiieserial clean
+	$(MAKE) -C asedriveiiieusb clean
+	$(MAKE) -C asedriveiiieserial clean
 	dh_clean 
-
 
 
 USBDIR = $(CURDIR)/debian/libasedrive-usb/usr/lib/pcsc/drivers/
@@ -71,10 +70,10 @@ install: build
 	dh_clean -k 
 	dh_installdirs
 
-	-$(MAKE) -C asedriveiiieusb install DESTDIR=`pwd`/debian/libasedrive-usb
+	$(MAKE) -C asedriveiiieusb install DESTDIR=`pwd`/debian/libasedrive-usb
 	rm debian/libasedrive-usb/usr/lib/pcsc/drivers/ifd-ASEDriveIIIe-USB.bundle/Contents/PkgInfo
 	rm -r debian/libasedrive-usb/usr/lib/pcsc/drivers/ifd-ASEDriveIIIe-USB.bundle/Contents/Resources
-	-$(MAKE) -C asedriveiiieserial install DESTDIR=`pwd`/debian/libasedrive-serial
+	$(MAKE) -C asedriveiiieserial install DESTDIR=`pwd`/debian/libasedrive-serial
 
 # Build architecture-independent files here.
 binary-indep: build install
