@@ -3,7 +3,7 @@ Section: libs
 Priority: optional
 Maintainer: Ludovic Rousseau <rousseau@debian.org>
 Build-Depends: debhelper (>= 4.1.16), libusb-dev, dpatch, libpcsclite-dev (>=1.2.0-stable-2), pkg-config
-Standards-Version: 3.6.2
+Standards-Version: 3.6.3
 
 Package: libasedrive-usb
 Section: libs
