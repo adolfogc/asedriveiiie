@@ -1,0 +1,29 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 04_configure.dpatch by  <rousseau@imac.maison.bogus>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: No description.
+
+@DPATCH@
+diff -urNad asedriveiiie-3.5~/asedriveiiieserial/configure asedriveiiie-3.5/asedriveiiieserial/configure
+--- asedriveiiie-3.5~/asedriveiiieserial/configure	2006-11-29 06:56:36.000000000 +0100
++++ asedriveiiie-3.5/asedriveiiieserial/configure	2008-01-05 18:18:28.000000000 +0100
+@@ -69,6 +69,6 @@
+ echo "USBDROPDIR=${USBDROPDIR}" >> Makefile.inc
+ echo "BUILD=${BUILD}" >> Makefile.inc
+ echo "CFLAGS=${CFLAGS}" >> Makefile.inc
+-echo "LDFLAGS=${LDFLAGS}" >> Makefile.inc
++#echo "LDFLAGS=${LDFLAGS}" >> Makefile.inc
+ 
+ exit 0
+diff -urNad asedriveiiie-3.5~/asedriveiiieusb/configure asedriveiiie-3.5/asedriveiiieusb/configure
+--- asedriveiiie-3.5~/asedriveiiieusb/configure	2006-11-29 06:48:21.000000000 +0100
++++ asedriveiiie-3.5/asedriveiiieusb/configure	2008-01-05 18:18:36.000000000 +0100
+@@ -69,6 +69,6 @@
+ echo "USBDROPDIR=${USBDROPDIR}" >> Makefile.inc
+ echo "BUILD=${BUILD}" >> Makefile.inc
+ echo "CFLAGS=${CFLAGS}" >> Makefile.inc
+-echo "LDFLAGS=${LDFLAGS}" >> Makefile.inc
++#echo "LDFLAGS=${LDFLAGS}" >> Makefile.inc
+ 
+ exit 0
