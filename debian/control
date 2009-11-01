@@ -3,7 +3,8 @@ Section: libs
 Priority: optional
 Maintainer: Ludovic Rousseau <rousseau@debian.org>
 Build-Depends: debhelper (>= 4.1.16), libusb-dev, dpatch, libpcsclite-dev (>=1.2.0-stable-2), pkg-config
-Standards-Version: 3.6.3
+Standards-Version: 3.8.3
+Homepage: http://www.athena-scs.com/
 
 Package: libasedrive-usb
 Section: libs
@@ -14,8 +15,6 @@ Description: PC/SC driver for the Athena ASEDrive IIIe USB smart card reader
  This package provides a PC/SC IFD handler bundle for the Athena ASEDrive
  IIIe USB smart card readers.  This driver is necessary to use one of these
  devices with the PC/SC Lite resource manager (pcscd).
- .
- Manufacturer homepage: http://www.athena-scs.com/
 
 Package: libasedrive-serial
 Section: libs
@@ -27,5 +26,3 @@ Description: PC/SC driver for the Athena ASEDrive IIIe serial smart card reader
  This package provides a PC/SC IFD handler bundle for the Athena ASEDrive
  IIIe serial smart card readers.  This driver is necessary to use one
  of these devices with the PC/SC Lite resource manager (pcscd).
- .
- Manufacturer homepage: http://www.athena-scs.com/

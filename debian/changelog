@@ -1,3 +1,13 @@
+asedriveiiie (3.5-3) unstable; urgency=low
+
+  * debian/control: Standards-Version: 3.6.3 => 3.8.3
+    Use Homepage: field
+    add debian/README.source (lintian warning patch-system-but-no-source-readme)
+  * Fix "invalid-standards-version 3.6.3" use Standards-Version 3.8.3
+    (Closes: #553567)
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sun, 01 Nov 2009 14:59:09 +0100
+
 asedriveiiie (3.5-2) unstable; urgency=low
 
   * debian/watch: add a watch file
