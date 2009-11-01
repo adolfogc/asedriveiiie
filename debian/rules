@@ -18,12 +18,6 @@ ifeq (,$(findstring nostrip,$(DEB_BUILD_OPTIONS)))
 	INSTALL_PROGRAM += -s
 endif
 
-version := $(shell dpkg-parsechangelog | \
-	sed -ne 's/^Version: *\([0-9]\+:\)*//p')
-
-tag:
-	cvs tag -c -F $(subst .,_,debian_version_$(version))
-
 include /usr/share/dpatch/dpatch.make
 
 configure: configure-stamp
