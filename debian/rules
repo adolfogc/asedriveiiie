@@ -24,6 +24,8 @@ version := $(shell dpkg-parsechangelog | \
 tag:
 	cvs tag -c -F $(subst .,_,debian_version_$(version))
 
+include /usr/share/dpatch/dpatch.make
+
 configure: configure-stamp
 configure-stamp: patch
 	dh_testdir
@@ -39,15 +41,6 @@ build-stamp: configure-stamp
 	CFLAGS="$(CFLAGS)" $(MAKE) -C asedriveiiieusb
 	CFLAGS="$(CFLAGS)" $(MAKE) -C asedriveiiieserial
 	touch build-stamp
-
-patch: patch-stamp
-patch-stamp:
-	dpatch apply-all
-	touch patch-stamp
-
-unpatch:
-	dpatch deapply-all
-	rm -rf patch-stamp debian/patched
 
 clean: clean-patched unpatch
 clean-patched:

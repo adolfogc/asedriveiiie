@@ -9,8 +9,9 @@ asedriveiiie (3.5-3) unstable; urgency=low
     command-with-path-in-maintainer-script postinst:65 /usr/sbin/update-reader.conf
     command-with-path-in-maintainer-script postrm:31 /usr/sbin/update-reader.conf
   * use debhelper compat level 7 instead of (deprecated) 4
+  * debian/rules: use /usr/share/dpatch/dpatch.make
 
- -- Ludovic Rousseau <rousseau@debian.org>  Sun, 01 Nov 2009 15:18:39 +0100
+ -- Ludovic Rousseau <rousseau@debian.org>  Sun, 01 Nov 2009 15:23:42 +0100
 
 asedriveiiie (3.5-2) unstable; urgency=low
 
