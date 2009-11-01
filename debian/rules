@@ -69,7 +69,7 @@ SERIALDIR = $(CURDIR)/debian/libasedrive-serial/usr/lib/pcsc/drivers/
 install: build
 	dh_testdir
 	dh_testroot
-	dh_clean -k 
+	dh_prep
 	dh_installdirs
 
 	$(MAKE) -C asedriveiiieusb install DESTDIR=`pwd`/debian/libasedrive-usb
