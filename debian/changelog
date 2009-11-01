@@ -6,8 +6,10 @@ asedriveiiie (3.5-3) unstable; urgency=low
   * Fix "invalid-standards-version 3.6.3" use Standards-Version 3.8.3
     (Closes: #553567)
   * debian/libasedrive-serial.post{inst,rm}: do not use absolute filenames
-    command-with-path-in-maintainer-script postinst:65 /usr/sbin/update-reader.conf
-    command-with-path-in-maintainer-script postrm:31 /usr/sbin/update-reader.conf
+    command-with-path-in-maintainer-script postinst:65
+    /usr/sbin/update-reader.conf
+    command-with-path-in-maintainer-script postrm:31
+    /usr/sbin/update-reader.conf
   * use debhelper compat level 7 instead of (deprecated) 4
   * debian/rules: use /usr/share/dpatch/dpatch.make
 
