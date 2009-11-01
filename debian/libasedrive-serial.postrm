@@ -27,9 +27,7 @@ case "$1" in
         rm -f $cfg
 
         # regenerate reader.conf
-        if [ -x /usr/sbin/update-reader.conf ]; then
-            /usr/sbin/update-reader.conf || true
-        fi
+        update-reader.conf || true
 
         # restart pcscd
         [ -x /etc/init.d/pcscd ] && invoke-rc.d pcscd restart 3>/dev/null
