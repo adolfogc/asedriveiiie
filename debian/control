@@ -7,7 +7,6 @@ Standards-Version: 3.8.3
 Homepage: http://www.athena-scs.com/
 
 Package: libasedrive-usb
-Section: libs
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, pcscd (>=1.2.0-stable-2)
 Provides: pcsc-ifd-handler
@@ -17,7 +16,6 @@ Description: PC/SC driver for the Athena ASEDrive IIIe USB smart card reader
  devices with the PC/SC Lite resource manager (pcscd).
 
 Package: libasedrive-serial
-Section: libs
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, pcscd (>=1.2.0-stable-2)
 Recommends:
