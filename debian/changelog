@@ -1,8 +1,9 @@
 asedriveiiie (3.5-4) UNRELEASED; urgency=low
 
   * convert from dpatch to Debian source format "3.0 (quilt)"
+  * debian/control: Standards-Version: 3.8.3 -> 3.9.1. No change needed.
 
- -- Ludovic Rousseau <rousseau@debian.org>  Fri, 03 Sep 2010 23:02:55 +0200
+ -- Ludovic Rousseau <rousseau@debian.org>  Fri, 03 Sep 2010 23:03:50 +0200
 
 asedriveiiie (3.5-3) unstable; urgency=low
 
