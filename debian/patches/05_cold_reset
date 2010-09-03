@@ -1,0 +1,31 @@
+Description: Warm reset always perform a cold reset
+Origin: upstream athena-scs
+Bug-Ubuntu: https://bugs.launchpad.net/ubuntu/+source/asedriveiiie/+bug/489115
+--- a/asedriveiiieusb/ifdhandler.c
++++ b/asedriveiiieusb/ifdhandler.c
+@@ -398,14 +398,19 @@
+     else
+     	ppsProt = 1;
+ 
+-    /* do a cold reset followed by PPS (if needed) */
+-    retVal = InitCard(&readerData[readerNum], socket, 1, (char*)(&ppsProt));
+-    if (retVal < 0) {
++    /* do a cold reset followed by PPS (if needed) only if the current protocol is to be changed*/
++	if (readerData[readerNum].cards[socket].status == 2 && 
++		(readerData[readerNum].cards[socket].activeProtocol == 0 && ppsProt != 0 ||
++		readerData[readerNum].cards[socket].activeProtocol == 1 && ppsProt != 1)) {
++
++		retVal = InitCard(&readerData[readerNum], socket, 1, (char*)(&ppsProt));
++		if (retVal < 0) {
+ #ifdef ASE_DEBUG
+-        syslog(LOG_INFO, "IFDHSetProtocolParameters - Error! retVal = %d\n", retVal);
++	        syslog(LOG_INFO, "IFDHSetProtocolParameters - Error! retVal = %d\n", retVal);
+ #endif
+-        return IFD_ERROR_PTS_FAILURE;
+-    }
++		    return IFD_ERROR_PTS_FAILURE;
++		}
++	}
+ 
+ #ifdef ASE_DEBUG
+     syslog(LOG_INFO, "==============================================\n");

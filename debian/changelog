@@ -4,8 +4,9 @@ asedriveiiie (3.5-4) UNRELEASED; urgency=low
   * debian/control: Standards-Version: 3.8.3 -> 3.9.1. No change needed.
   * debian/control: remove reference to 1.2.0-stable-2 version of pcsc-lite.
     Debian stable (lenny) already has pcsc-lite 1.4.102
+  * debian/patches/05_cold_reset: fix Ubuntu bug LP: #489115
 
- -- Ludovic Rousseau <rousseau@debian.org>  Fri, 03 Sep 2010 23:09:09 +0200
+ -- Ludovic Rousseau <rousseau@debian.org>  Fri, 03 Sep 2010 23:16:00 +0200
 
 asedriveiiie (3.5-3) unstable; urgency=low
 
