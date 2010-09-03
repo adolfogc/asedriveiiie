@@ -18,10 +18,8 @@ ifeq (,$(findstring nostrip,$(DEB_BUILD_OPTIONS)))
 	INSTALL_PROGRAM += -s
 endif
 
-include /usr/share/dpatch/dpatch.make
-
 configure: configure-stamp
-configure-stamp: patch
+configure-stamp:
 	dh_testdir
 	cd asedriveiiieusb ; ./configure
 	cd asedriveiiieserial ; ./configure
@@ -36,8 +34,7 @@ build-stamp: configure-stamp
 	CFLAGS="$(CFLAGS)" $(MAKE) -C asedriveiiieserial
 	touch build-stamp
 
-clean: clean-patched unpatch
-clean-patched:
+clean:
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp configure-stamp
@@ -87,4 +84,4 @@ binary-arch: build install
 	dh_builddeb
 
 binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install configure patch unpatch
+.PHONY: build clean binary-indep binary-arch binary install configure

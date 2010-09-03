@@ -1,0 +1,22 @@
+Description: do not link the drivers with libpcsclite.so 
+Author: Ludovic Rousseau <rousseau@debian.org>
+--- a/asedriveiiieserial/configure
++++ b/asedriveiiieserial/configure
+@@ -69,6 +69,6 @@
+ echo "USBDROPDIR=${USBDROPDIR}" >> Makefile.inc
+ echo "BUILD=${BUILD}" >> Makefile.inc
+ echo "CFLAGS=${CFLAGS}" >> Makefile.inc
+-echo "LDFLAGS=${LDFLAGS}" >> Makefile.inc
++#echo "LDFLAGS=${LDFLAGS}" >> Makefile.inc
+ 
+ exit 0
+--- a/asedriveiiieusb/configure
++++ b/asedriveiiieusb/configure
+@@ -69,6 +69,6 @@
+ echo "USBDROPDIR=${USBDROPDIR}" >> Makefile.inc
+ echo "BUILD=${BUILD}" >> Makefile.inc
+ echo "CFLAGS=${CFLAGS}" >> Makefile.inc
+-echo "LDFLAGS=${LDFLAGS}" >> Makefile.inc
++#echo "LDFLAGS=${LDFLAGS}" >> Makefile.inc
+ 
+ exit 0
