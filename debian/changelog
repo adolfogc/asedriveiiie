@@ -1,3 +1,11 @@
+asedriveiiie (3.5-5) experimental; urgency=low
+
+  * Fix "FTBFS: ./configure: 49: pkg-config: not found" re-add the
+    Build-Depends: pkg-config that was inadvertently removed in the previous
+    version (Closes: #595641)
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sun, 05 Sep 2010 17:03:15 +0200
+
 asedriveiiie (3.5-4) experimental; urgency=low
 
   * convert from dpatch to Debian source format "3.0 (quilt)"
