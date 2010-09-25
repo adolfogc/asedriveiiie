@@ -1,0 +1,8 @@
+--- a/asedriveiiie-usb/Makefile
++++ b/asedriveiiie-usb/Makefile
+@@ -25,4 +25,4 @@
+ 	install -c -m 0644 ifd-ASEDriveIIIe-USB.bundle/Contents/Resources/English.lproj/InfoPlist.strings "${DRIVER_DIR}/Contents/Resources/English.lproj"
+ 	install -c -d "${DRIVER_DIR}/Contents/Linux"
+ 	install -c -m 0755 libASEDriveIIIe-USB.so "${DRIVER_DIR}/Contents/Linux"
+-	install -c -m 0644 50-pcscd-asedriveiiie.rules /etc/udev/rules.d/.
++	#install -c -m 0644 50-pcscd-asedriveiiie.rules /etc/udev/rules.d/.

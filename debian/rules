@@ -21,27 +21,27 @@ endif
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
-	cd asedriveiiieusb ; ./configure
-	cd asedriveiiieserial ; ./configure
+	cd asedriveiiie-usb ; ./configure
+	cd asedriveiiie-serial ; ./configure
 	touch configure-stamp
 
 
 build: build-stamp
 build-stamp: configure-stamp 
 	dh_testdir
-	-mkdir asedriveiiieusb/ifd-AseIIIeUSB.bundle/Contents/Linux
-	CFLAGS="$(CFLAGS)" $(MAKE) -C asedriveiiieusb
-	CFLAGS="$(CFLAGS)" $(MAKE) -C asedriveiiieserial
+	-mkdir asedriveiiie-usb/ifd-AseIIIeUSB.bundle/Contents/Linux
+	CFLAGS="$(CFLAGS)" $(MAKE) -C asedriveiiie-usb
+	CFLAGS="$(CFLAGS)" $(MAKE) -C asedriveiiie-serial
 	touch build-stamp
 
 clean:
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp configure-stamp
-	touch asedriveiiieusb/Makefile.inc
-	$(MAKE) -C asedriveiiieusb clean
-	touch asedriveiiieserial/Makefile.inc
-	$(MAKE) -C asedriveiiieserial clean
+	touch asedriveiiie-usb/Makefile.inc
+	$(MAKE) -C asedriveiiie-usb clean
+	touch asedriveiiie-serial/Makefile.inc
+	$(MAKE) -C asedriveiiie-serial clean
 	dh_clean 
 
 
@@ -56,10 +56,11 @@ install: build
 	dh_prep
 	dh_installdirs
 
-	$(MAKE) -C asedriveiiieusb install DESTDIR=`pwd`/debian/libasedrive-usb
+	$(MAKE) -C asedriveiiie-usb install DESTDIR=`pwd`/debian/libasedrive-usb
 	rm debian/libasedrive-usb/usr/lib/pcsc/drivers/ifd-ASEDriveIIIe-USB.bundle/Contents/PkgInfo
 	rm -r debian/libasedrive-usb/usr/lib/pcsc/drivers/ifd-ASEDriveIIIe-USB.bundle/Contents/Resources
-	$(MAKE) -C asedriveiiieserial install DESTDIR=`pwd`/debian/libasedrive-serial
+	$(MAKE) -C asedriveiiie-serial install DESTDIR=`pwd`/debian/libasedrive-serial
+	cp asedriveiiie-usb/50-pcscd-asedriveiiie.rules debian/libasedrive-usb.udev
 
 # Build architecture-independent files here.
 binary-indep: build install
@@ -72,6 +73,7 @@ binary-arch: build install
 	dh_installdocs
 	dh_install
 	dh_installdebconf	
+	dh_installudev
 	dh_link
 	dh_strip
 	dh_compress

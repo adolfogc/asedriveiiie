@@ -1,4 +1,2 @@
-03_serial_build
-03_usb_build
+06_rules_file_install
 04_configure
-05_cold_reset
