@@ -1,3 +1,10 @@
+asedriveiiie (3.7-2) unstable; urgency=low
+
+  * No need of debian/libasedrive-usb.{postinst,postrm} now that pcscd is
+    auto-started. The /etc/init.d/pcscd script does nothing now.
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Tue, 08 Feb 2011 21:13:23 +0100
+
 asedriveiiie (3.7-1) experimental; urgency=low
 
   * New upstream release
