@@ -2,8 +2,12 @@ asedriveiiie (3.7-2) unstable; urgency=low
 
   * No need of debian/libasedrive-usb.{postinst,postrm} now that pcscd is
     auto-started. The /etc/init.d/pcscd script does nothing now.
+  * debian/libasedrive-serial.{postinst,postrm}:
+    - do not call update-reader.conf anymore since this script is no more in
+    pcsc-lite >= 1.6.0
+    - do not call invoke-rc.d pcscd anymore since it does nothing
 
- -- Ludovic Rousseau <rousseau@debian.org>  Tue, 08 Feb 2011 21:13:23 +0100
+ -- Ludovic Rousseau <rousseau@debian.org>  Wed, 09 Feb 2011 21:18:53 +0100
 
 asedriveiiie (3.7-1) experimental; urgency=low
 

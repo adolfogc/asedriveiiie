@@ -25,12 +25,6 @@ case "$1" in
 	remove|failed-upgrade|abort-install|abort-upgrade|disappear)
         # remove config file created by postinst
         rm -f $cfg
-
-        # regenerate reader.conf
-        update-reader.conf || true
-
-        # restart pcscd
-        [ -x /etc/init.d/pcscd ] && invoke-rc.d pcscd restart 3>/dev/null
         ;;
 
     purge|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)

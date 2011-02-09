@@ -60,12 +60,6 @@ case "$1" in
                 ;;
         esac
 
-        # regenerate /etc/reader.conf
-        update-reader.conf || true
-
-        # restart pcscd
-        [ -x /etc/init.d/pcscd ] && invoke-rc.d pcscd restart 3>/dev/null
-
         # end debconf
         db_stop
     ;;
