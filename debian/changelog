@@ -9,8 +9,10 @@ asedriveiiie (3.7-3) unstable; urgency=low
   * debian/control: Standards-Version: 3.9.1 -> 3.9.2. No change needed.
   * Fix lintian warning P: libasedrive-serial: maintainer-script-without-set-e
     config
+  * debian/patches/07_build_usb: install the driver in /usr/lib/ instead of
+    /usr/local/
 
- -- Ludovic Rousseau <rousseau@debian.org>  Tue, 14 Feb 2012 21:17:33 +0100
+ -- Ludovic Rousseau <rousseau@debian.org>  Tue, 14 Feb 2012 21:51:28 +0100
 
 asedriveiiie (3.7-2) unstable; urgency=low
 

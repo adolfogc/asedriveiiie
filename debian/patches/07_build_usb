@@ -1,0 +1,10 @@
+--- a/asedriveiiie-usb/Makefile.inc
++++ b/asedriveiiie-usb/Makefile.inc
+@@ -1,5 +1,4 @@
+ PREFIX=/usr
+-USBDROPDIR=/usr/local/pcsc/drivers
++USBDROPDIR=/usr/lib/pcsc/drivers
+ BUILD=
+-CFLAGS= -pthread -I/usr/local/include/PCSC  
+-LDFLAGS= -L/usr/local/lib -lpcsclite  
++CFLAGS= -pthread -I/usr/include/PCSC  
