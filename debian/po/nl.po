@@ -1,40 +1,33 @@
-#
-#    Translators, if you are not familiar with the PO format, gettext
-#    documentation is worth reading, especially sections dedicated to
-#    this format, e.g. by running:
-#         info -n '(gettext)PO Files'
-#         info -n '(gettext)Header Entry'
-#
-#    Some information specific to po-debconf are available at
-#            /usr/share/doc/po-debconf/README-trans
-#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
-#
-#    Developers do not need to manually edit POT or PO files.
+# Dutch translation of asedriveiiie debconf templates.
+# Copyright (C) 2003-2012 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the asedriveiiie package.
+# Tim Vandermeersch <qber66@skolelinux.no>, 2003.
+# Jeroen Schot <schot@a-eskwadraat.nl>, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: ifd-gempc 0.8.0-5\n"
+"Project-Id-Version: asedriveiiie 3.7-2\n"
 "Report-Msgid-Bugs-To: asedriveiiie@packages.debian.org\n"
 "POT-Creation-Date: 2008-01-05 17:43+0100\n"
-"PO-Revision-Date: 2003-09-01 22:55+0100\n"
-"Last-Translator: Tim Vandermeersch <qber66@skolelinux.no>\n"
-"Language-Team: dutch <debian-l10n-dutch@lists.debian.org>\n"
+"PO-Revision-Date: 2012-02-13 12:24+0100\n"
+"Last-Translator: Jeroen Schot <schot@a-eskwadraat.nl>\n"
+"Language-Team: Debian l10n Dutch <debian-l10n-dutch@lists.debian.org>\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Type: select
 #. Choices
 #: ../libasedrive-serial.templates:1001
 msgid "none"
-msgstr ""
+msgstr "geen"
 
 #. Type: select
 #. Description
 #: ../libasedrive-serial.templates:1002
-#, fuzzy
 msgid "Communication port to use with the smart card reader:"
-msgstr "Met welke seriële poort is de smart card lezer verbonden?"
+msgstr "Communicatiepoort die gebruikt moet weorden met de smartcard-lezer:"
 
 #. Type: select
 #. Description
@@ -43,5 +36,5 @@ msgid ""
 "The driver needs to know which serial port the Athena ASEDrive IIIe card "
 "reader is connected to."
 msgstr ""
-"Het stuurprogramma moet weten met welke seriële poort de ASEDrive IIIe lezer "
+"Het stuurprogramma moet weten met welke seriÃ«le poort de ASEDrive IIIe-lezer "
 "verbonden is."

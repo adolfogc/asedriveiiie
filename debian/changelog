@@ -1,3 +1,10 @@
+asedriveiiie (3.7-3) unstable; urgency=low
+
+  * Fix "[INTL:nl] Dutch translation of debconf templates" update
+    debian/po/nl.po file (Closes: #659706)
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Tue, 14 Feb 2012 18:26:30 +0100
+
 asedriveiiie (3.7-2) unstable; urgency=low
 
   * No need of debian/libasedrive-usb.{postinst,postrm} now that pcscd is
