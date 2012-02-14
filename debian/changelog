@@ -6,8 +6,9 @@ asedriveiiie (3.7-3) unstable; urgency=low
     06_rules_file_install by adding DEP3 description
   * Fix lintian warning W: asedriveiiie source:
     debian-rules-missing-recommended-target build-arch
+  * debian/control: Standards-Version: 3.9.1 -> 3.9.2. No change needed.
 
- -- Ludovic Rousseau <rousseau@debian.org>  Tue, 14 Feb 2012 21:07:48 +0100
+ -- Ludovic Rousseau <rousseau@debian.org>  Tue, 14 Feb 2012 21:09:10 +0100
 
 asedriveiiie (3.7-2) unstable; urgency=low
 

@@ -3,7 +3,7 @@ Section: libs
 Priority: optional
 Maintainer: Ludovic Rousseau <rousseau@debian.org>
 Build-Depends: debhelper (>= 7.0.0~), libusb-dev, libpcsclite-dev, pkg-config
-Standards-Version: 3.9.1
+Standards-Version: 3.9.2
 Homepage: http://www.athena-scs.com/
 
 Package: libasedrive-usb
