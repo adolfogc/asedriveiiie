@@ -4,8 +4,10 @@ asedriveiiie (3.7-3) unstable; urgency=low
     debian/po/nl.po file (Closes: #659706)
   * Fix lintian warning: asedriveiiie source: quilt-patch-missing-description
     06_rules_file_install by adding DEP3 description
+  * Fix lintian warning W: asedriveiiie source:
+    debian-rules-missing-recommended-target build-arch
 
- -- Ludovic Rousseau <rousseau@debian.org>  Tue, 14 Feb 2012 21:04:15 +0100
+ -- Ludovic Rousseau <rousseau@debian.org>  Tue, 14 Feb 2012 21:07:48 +0100
 
 asedriveiiie (3.7-2) unstable; urgency=low
 
