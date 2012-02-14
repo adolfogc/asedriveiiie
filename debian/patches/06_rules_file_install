@@ -1,3 +1,5 @@
+From: Ludovic Rousseau <rousseau@debian.org>
+Subject: Do not install the rule file now pcscd is run as root
 --- a/asedriveiiie-usb/Makefile
 +++ b/asedriveiiie-usb/Makefile
 @@ -25,4 +25,4 @@

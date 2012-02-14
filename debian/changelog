@@ -2,8 +2,10 @@ asedriveiiie (3.7-3) unstable; urgency=low
 
   * Fix "[INTL:nl] Dutch translation of debconf templates" update
     debian/po/nl.po file (Closes: #659706)
+  * Fix lintian warning: asedriveiiie source: quilt-patch-missing-description
+    06_rules_file_install by adding DEP3 description
 
- -- Ludovic Rousseau <rousseau@debian.org>  Tue, 14 Feb 2012 18:26:30 +0100
+ -- Ludovic Rousseau <rousseau@debian.org>  Tue, 14 Feb 2012 21:04:15 +0100
 
 asedriveiiie (3.7-2) unstable; urgency=low
 
