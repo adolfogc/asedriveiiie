@@ -1,6 +1,7 @@
 asedriveiiie (3.7-4) unstable; urgency=low
 
   * debian/watch: update upstream URL
+  * debian/rules: hardening build
 
  -- Ludovic Rousseau <rousseau@debian.org>  Sat, 18 Jan 2014 12:19:27 +0100
 
