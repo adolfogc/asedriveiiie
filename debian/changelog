@@ -1,3 +1,9 @@
+asedriveiiie (3.7-4) unstable; urgency=low
+
+  * debian/watch: update upstream URL
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sat, 18 Jan 2014 12:19:27 +0100
+
 asedriveiiie (3.7-3) unstable; urgency=low
 
   * Fix "[INTL:nl] Dutch translation of debconf templates" update
