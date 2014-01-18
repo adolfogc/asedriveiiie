@@ -35,7 +35,6 @@ build-arch: build-stamp
 build-indep: build-stamp
 build-stamp: configure-stamp 
 	dh_testdir
-	-mkdir asedriveiiie-usb/ifd-AseIIIeUSB.bundle/Contents/Linux
 	CFLAGS="$(CFLAGS)" $(MAKE) -C asedriveiiie-usb
 	CFLAGS="$(CFLAGS)" $(MAKE) -C asedriveiiie-serial
 	touch build-stamp
