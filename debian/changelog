@@ -1,3 +1,10 @@
+asedriveiiie (3.7-5) unstable; urgency=medium
+
+  * Fix "[INTL:it] Italian translation of debconf messages" add
+    provided debian/po/it.po file (Closes: #737215)
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sun, 02 Feb 2014 15:06:34 +0100
+
 asedriveiiie (3.7-4) unstable; urgency=low
 
   * debian/watch: update upstream URL
