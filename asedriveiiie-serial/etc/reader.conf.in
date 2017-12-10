@@ -1,0 +1,10 @@
+# Configuration file for pcsc-lite
+#
+
+# ASEDriveIIIe Serial Reader
+FRIENDLYNAME    "ASEDrive IIIe Serial Reader on COM1"
+DEVICENAME       /dev/null
+LIBPATH          %PCSC_DRIVERS_DIR%/ifd-ASEDriveIIIe-Serial/libASESerial.so
+CHANNELID        0x0103F8
+
+# End of file

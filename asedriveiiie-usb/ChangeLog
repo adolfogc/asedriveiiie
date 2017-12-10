@@ -1,0 +1,17 @@
+asedriveiiie-usb-3.6:
+=====================
+- IFDHSetProtocolParameters does nothing when the protocol need not be changed.
+
+asedriveiiie-usb-3.5:
+=====================
+- removed ifdhandler.h and added IFDHANDLERv2 to Makefile in order to support
+pcsc-lite-1.4.0 and above.
+
+asedriveiiieusb-3.4:
+=====================
+- fixed and changed bundle names and Makefile scripts
+                                                                                
+asedriveiiieusb-3.3:
+=====================
+- add support for AseIIIeUSB KB 
+

@@ -1,0 +1,88 @@
+***************************************************************
+
+Title   : README 
+Hardware: ASEDrive IIIe Serial Smartcard Reader
+Company : Athena Smartcard Solutions, http://www.athena-scs.com
+Version : 3.7 
+LICENSE : See file LICENSE
+
+Required: gcc 2.7 or higher, Linux kernel 2.4.x or higher 
+
+***************************************************************
+
+ What you need:
+================
+
+Get the latest version of PCSC Lite by David Corcoran.
+You can get the latest version of PCSC Lite from:
+
+http://www.linuxnet.com/middle.html
+
+Follow the instructions and install it on your computer.
+
+
+ Installing the ASEDrive IIIe Serial driver:
+===========================================
+
+To complie this package from a Linux prompt use the following:
+ # ./configure
+ # make
+ # make install
+                                                                                
+The driver installs itself to /usr/local/pcsc/drivers by default.
+To change this edit the Makefile and the etc/reader.conf file.
+                                                                                
+This will create a shared library called libAseSerial.so which is 
+the library used to talk to the IFD Handler interface.  To install
+this reader into the PCSC/Lite Architecture simply edit the etc/reader.conf
+file included in the package and set the LIBRARY_PATH to the location
+of the shared library.  An example reader.conf is provided in this package
+in the etc directory.  Also, set the CHANNELID to the approprate serial
+port desired.  Use the following values for CHANNELID:
+
+COM1	0x0103F8
+COM2	0x0102F8
+COM3	0x0103E8
+COM4	0x0102E8
+
+For devices on the USB bus (e.g. a serial to usb adaptor) use:
+
+/dev/ttyUSB0	0x800000
+/dev/ttyUSB1	0x800001
+/dev/ttyUSB2	0x800002
+/dev/ttyUSB3	0x800003
+
+DEVICENAME and FRIENDLYNAME should already be set and should not be modified.
+When finished, simply copy the reader.conf file to /etc on your system.
+
+NOTE: If a /etc/reader.conf file already exists on your system, simply append the 
+contents of the edited file to the end of the exisiting one.
+
+
+ Starting and testing:
+=======================
+
+To start the pcsc daemon you'll need root privileges.
+
+ # /usr/local/pcsc/bin/pcscd
+
+You should be able to communicate with the reader by now.
+
+There is a small test program called "testpcsc" that comes with the 
+pcsc-lite package. Refer to the pcsc-lite's README for compilation instructions.
+This program tries to connect to the selected reader and to get the ATR.
+
+
+ Notes:
+========
+
+- To see the driver's debug messages, add -DASE_DEBUG to CC 
+in the Makefile and recompile.
+Note that the messages are written to the system log (usually: /var/log/messages).
+
+ Questions:
+============
+
+For questions, please email at: support@athena-scs.com
+
+

@@ -1,0 +1,17 @@
+asedriveiiie-serial-3.6:
+=====================
+- IFDHSetProtocolParameters does nothing when the protocol need not be changed.
+
+asedriveiiie-serial-3.5:
+=====================
+- removed ifdhandler.h and added IFDHANDLERv2 to Makefile in order to support
+pcsc-lite-1.4.0 and above.
+
+asedriveiiieserial-3.4:
+=====================
+- corrected installation scripts 
+
+asedriveiiieserial-3.3:
+=====================
+- add support for devices on the USB bus (e.g. a serial to usb adaptor) 
+

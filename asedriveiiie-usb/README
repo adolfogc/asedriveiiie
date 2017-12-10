@@ -1,0 +1,101 @@
+***************************************************************
+
+Title   : README 
+Hardware: ASEDrive IIIe USB Smartcard Reader
+Company : Athena Smartcard Solutions, http://www.athena-scs.com
+Version : 3.6 
+LICENSE : See file LICENSE
+
+Required: gcc 2.7 or higher, Linux kernel 2.4 or higher
+
+***************************************************************
+
+ What you need:
+================
+
+1) Get the latest version of PCSC Lite by David Corcoran.
+You can get the latest version of PCSC Lite from:
+
+http://www.linuxnet.com/middle.html
+
+Follow the instructions and install it on your computer.
+
+
+2) The ifd-AseIIIeUSB driver uses the libusb library to access USB devices. 
+It can be downloaded from:
+
+http://libusb.sourceforge.net/
+
+You need to install this library and in particular its usb.h file which is 
+needed in the driver's compilation under GNU/Linux.
+
+
+ Installing the ASEDrive IIIe USB driver:
+===========================================
+
+To complie this package from a Linux prompt use the following:
+ # ./configure
+ # make
+ # make install
+                                                                                
+The driver installs itself to /usr/local/pcsc/drivers by default.
+To change this edit the Makefile.
+                                                                                
+This will create a shared library called ifd-AseIIIeUSB 
+(under ifd-AseIIIeUSB.bundle/Contents/Linux) which is 
+the library used to talk to the IFD Handler interface.  
+
+You must be root to install all the files to their locations.
+
+
+ Starting and testing:
+=======================
+
+To start the pcsc daemon you'll need root privileges.
+
+ # /usr/local/pcsc/bin/pcscd
+
+You should be able to communicate with the reader by now.
+
+There is a small test program called "testpcsc" that comes with the 
+pcsc-lite package. Refer to the pcsc-lite's README for compilation instructions.
+This program tries to connect to the selected reader and to get the ATR.
+
+
+ Notes:
+========
+
+- To see the driver's debug messages, add -DASE_DEBUG to CFLAGS 
+in the Makefile. Recompile and rerun the installation script. Note that
+the messages are written to the system log (usually: /var/log/messages).
+
+- In order to use the USB ports your kernel needs to support usbdevfs.
+You should have the following results:
+
+$ grep usb /proc/devices 
+180 usb
+$ grep usb /proc/filesystems 
+nodev   usbdevfs
+nodev   usbfs
+
+If it is not the case, you may have to recompile your kernel. More details
+are available at: 
+
+http://www.linux-usb.org/
+
+
+- If the reader fails to function, check if your system supports usb. 
+To do so, check if /proc/bus/usb/ exists, and if yes "cd" into this directory. 
+Run the command "cat devices" and check if the reader appears. 
+
+If your system does not support usb, you may need to reinstall/reconfigure it.
+More details can be found at: /usr/src/linux/Documentation/usb/proc_usb_info.txt
+and at: http://linux-hotplug.sourceforge.net/
+
+
+ Questions:
+============
+
+For questions, please email at: support@athena-scs.com
+
+
