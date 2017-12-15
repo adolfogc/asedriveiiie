@@ -1,3 +1,14 @@
+asedriveiiie (3.7-6) unstable; urgency=medium
+
+  * Initial upstream branch.
+  * New upstream version 3.7
+  * Migrate the Debian packging from SVN to GIT
+  * Upgrade debhelper from 7 to 10
+  * Enable hardening=+all
+  * Standards-Version: 3.9.5 -> 3.9.8. No change needed.
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Fri, 15 Dec 2017 15:18:19 +0100
+
 asedriveiiie (3.7-5) unstable; urgency=medium
 
   * Fix "[INTL:it] Italian translation of debconf messages" add
