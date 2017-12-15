@@ -1,53 +1,28 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
 
-# Uncomment this to turn on verbose mode.
-#export DH_VERBOSE=1
-
 # https://wiki.debian.org/Hardening
 DPKG_EXPORT_BUILDFLAGS = 1
 include /usr/share/dpkg/buildflags.mk
 
-CFLAGS += -g
+%:
+	dh $@
 
-ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
-	CFLAGS += -O0
-else
-	CFLAGS += -O2
-endif
-
-INSTALL = install
-INSTALL_PROGRAM = $(INSTALL) -p    -o root -g root  -m  755
-ifeq (,$(findstring nostrip,$(DEB_BUILD_OPTIONS)))
-	INSTALL_PROGRAM += -s
-endif
-
-configure: configure-stamp
-configure-stamp:
-	dh_testdir
+override_dh_auto_configure:
 	cd asedriveiiie-usb ; ./configure
 	cd asedriveiiie-serial ; ./configure
-	touch configure-stamp
 
-
-build: build-arch build-indep
-build-arch: build-stamp
-build-indep: build-stamp
-build-stamp: configure-stamp 
-	dh_testdir
+override_dh_auto_build:
 	CFLAGS="$(CFLAGS)" $(MAKE) -C asedriveiiie-usb
 	CFLAGS="$(CFLAGS)" $(MAKE) -C asedriveiiie-serial
-	touch build-stamp
 
-clean:
-	dh_testdir
-	dh_testroot
+override_dh_auto_clean:
 	rm -f build-stamp configure-stamp
 	touch asedriveiiie-usb/Makefile.inc
 	$(MAKE) -C asedriveiiie-usb clean
 	touch asedriveiiie-serial/Makefile.inc
 	$(MAKE) -C asedriveiiie-serial clean
-	dh_clean 
+	dh_auto_clean 
 
 
 USBDIR = $(CURDIR)/debian/libasedrive-usb/usr/lib/pcsc/drivers/
@@ -55,40 +30,11 @@ SERIALDIR = $(CURDIR)/debian/libasedrive-serial/usr/lib/pcsc/drivers/
 
 # note that the Athena source package has no "make install" target; we have 
 # to kick all the files around ourselves.
-install: build
-	dh_testdir
-	dh_testroot
-	dh_prep
-	dh_installdirs
+override_dh_auto_install:
+	dh_auto_install
 
 	$(MAKE) -C asedriveiiie-usb install DESTDIR=`pwd`/debian/libasedrive-usb
 	rm debian/libasedrive-usb/usr/lib/pcsc/drivers/ifd-ASEDriveIIIe-USB.bundle/Contents/PkgInfo
 	rm -r debian/libasedrive-usb/usr/lib/pcsc/drivers/ifd-ASEDriveIIIe-USB.bundle/Contents/Resources
 	$(MAKE) -C asedriveiiie-serial install DESTDIR=`pwd`/debian/libasedrive-serial
 	cp asedriveiiie-usb/50-pcscd-asedriveiiie.rules debian/libasedrive-usb.udev
-
-# Build architecture-independent files here.
-binary-indep: build install
-
-# Build architecture-dependent files here.
-binary-arch: build install
-	dh_testdir
-	dh_testroot
-	dh_installchangelogs 
-	dh_installdocs
-	dh_install
-	dh_installdebconf	
-	dh_installudev
-	dh_link
-	dh_strip
-	dh_compress
-	dh_fixperms
-	dh_makeshlibs
-	dh_installdeb
-	dh_shlibdeps
-	dh_gencontrol
-	dh_md5sums
-	dh_builddeb
-
-binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install configure
