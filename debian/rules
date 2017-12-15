@@ -2,6 +2,7 @@
 # -*- makefile -*-
 
 # https://wiki.debian.org/Hardening
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 DPKG_EXPORT_BUILDFLAGS = 1
 include /usr/share/dpkg/buildflags.mk
 
@@ -9,12 +10,12 @@ include /usr/share/dpkg/buildflags.mk
 	dh $@
 
 override_dh_auto_configure:
-	cd asedriveiiie-usb ; ./configure
-	cd asedriveiiie-serial ; ./configure
+	cd asedriveiiie-usb ; CFLAGS="$(CFLAGS) $(CPPFLAGS)" ./configure
+	cd asedriveiiie-serial ; CFLAGS="$(CFLAGS) $(CPPFLAGS)" ./configure
 
 override_dh_auto_build:
-	CFLAGS="$(CFLAGS)" $(MAKE) -C asedriveiiie-usb
-	CFLAGS="$(CFLAGS)" $(MAKE) -C asedriveiiie-serial
+	$(MAKE) -C asedriveiiie-usb
+	$(MAKE) -C asedriveiiie-serial
 
 override_dh_auto_clean:
 	rm -f build-stamp configure-stamp
