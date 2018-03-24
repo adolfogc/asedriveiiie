@@ -1,3 +1,9 @@
+asedriveiiie (3.7-7) unstable; urgency=medium
+
+  * d/control: Set Vcs-* to salsa.debian.org
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sat, 24 Mar 2018 23:18:09 +0100
+
 asedriveiiie (3.7-6) unstable; urgency=medium
 
   * Initial upstream branch.
