@@ -6,7 +6,7 @@ Build-Depends: debhelper (>= 10.0.0~), libusb-dev, libpcsclite-dev, pkg-config
 Standards-Version: 3.9.8
 Vcs-Git: https://salsa.debian.org/debian/asedriveiiie.git
 Vcs-Browser: https://salsa.debian.org/debian/asedriveiiie
-Homepage: http://www.athena-scs.com/
+Homepage: https://www.athena-scs.com/
 
 Package: libasedrive-usb
 Architecture: any
