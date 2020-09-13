@@ -1,6 +1,13 @@
 asedriveiiie (3.7-8) UNRELEASED; urgency=medium
 
+  [ Ondřej Nový ]
   * d/changelog: Remove trailing whitespaces
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Use secure URI in Homepage field.
+  * Bump debhelper from old 10 to 12.
+  * Set debhelper-compat version in Build-Depends.
 
  -- Ondřej Nový <onovy@debian.org>  Mon, 01 Oct 2018 10:12:45 +0200
 
@@ -269,4 +276,3 @@ asedriveiiie (1.8-1) unstable; urgency=low
     unplugging reader.
 
  -- Michael A. Dickerson <mikey@singingtree.com>  Thu,  8 Jul 2004 18:12:50 -0700
-
