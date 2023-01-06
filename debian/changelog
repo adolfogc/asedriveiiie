@@ -1,4 +1,4 @@
-asedriveiiie (3.7-9) UNRELEASED; urgency=medium
+asedriveiiie (3.7-9) unstable; urgency=medium
 
   * Fix "[INTL:pt_BR] Brazilian Portuguese debconf templates
     translation" (Closes: #1028072)
@@ -6,7 +6,7 @@ asedriveiiie (3.7-9) UNRELEASED; urgency=medium
   * d/po/sv.po: convert from ISO-8859-1 to utf-8
   * Standards-Version: 3.9.8 -> 4.6.1. No change needed.
 
- -- Ludovic Rousseau <rousseau@debian.org>  Fri, 06 Jan 2023 16:21:48 +0100
+ -- Ludovic Rousseau <rousseau@debian.org>  Fri, 06 Jan 2023 16:32:30 +0100
 
 asedriveiiie (3.7-8) unstable; urgency=medium
 
