@@ -1,3 +1,10 @@
+asedriveiiie (3.7-9) UNRELEASED; urgency=medium
+
+  * Fix "[INTL:pt_BR] Brazilian Portuguese debconf templates
+    translation" (Closes: #1028072)
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Fri, 06 Jan 2023 16:21:48 +0100
+
 asedriveiiie (3.7-8) unstable; urgency=medium
 
   [ Ondřej Nový ]
