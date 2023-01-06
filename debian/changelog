@@ -4,6 +4,7 @@ asedriveiiie (3.7-9) UNRELEASED; urgency=medium
     translation" (Closes: #1028072)
   * d/po/da.po: convert from ISO-8859-1 to utf-8
   * d/po/sv.po: convert from ISO-8859-1 to utf-8
+  * Standards-Version: 3.9.8 -> 4.6.1. No change needed.
 
  -- Ludovic Rousseau <rousseau@debian.org>  Fri, 06 Jan 2023 16:21:48 +0100
 
