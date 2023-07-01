@@ -11,7 +11,7 @@
 typedef unsigned short  BOOL;
 #endif
 typedef BOOL            bool;
-typedef unsigned short  USHORT;
+typedef unsigned short  unsigned short;
 typedef unsigned char	UCHAR;
 typedef UCHAR           BYTE;
 typedef unsigned char*	PUCHAR;

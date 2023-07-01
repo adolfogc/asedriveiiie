@@ -270,7 +270,7 @@ extern int T0CPUCardTransact (reader* globalData, char socket, char* buffer, int
 extern int T1CPUCardTransact (reader* globalData, char socket, char* buffer, int len, char* outBuf, int* outBufLen);
 
 extern int MemoryCardTransact (reader* globalData, char socket, 
-                               char cmdType, uchar command, ushort address, uchar len,
+                               char cmdType, uchar command, unsigned short address, uchar len,
                                uchar* data, char* outBuf, int* outBufLen);
 
 

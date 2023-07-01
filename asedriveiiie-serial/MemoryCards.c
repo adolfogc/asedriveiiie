@@ -105,7 +105,7 @@ static void AddSW1SW2 (int status, uchar* outBuf, int* outBufLen, uchar moreInfo
 *
 *****************************************************************************/
 static int _2BUSExecInCommand (reader* globalData, uchar socket, 
-                               uchar cmdCode, ushort address, uchar len,
+                               uchar cmdCode, unsigned short address, uchar len,
                                uchar* outBuffer, int *outBufLen) {
     int retVal, actual = 0;
 
@@ -123,7 +123,7 @@ static int _2BUSExecInCommand (reader* globalData, uchar socket,
 *
 *****************************************************************************/
 static int _2BUSExecOutCommand (reader* globalData, uchar socket, 
-                                uchar cmdCode, ushort address, 
+                                uchar cmdCode, unsigned short address, 
                                 uchar* data, uchar len,
                                 uchar* outBuffer, int *outBufLen) {
     int retVal;                      
@@ -141,7 +141,7 @@ static int _2BUSExecOutCommand (reader* globalData, uchar socket,
 *
 *****************************************************************************/
 static void ArrangeBitsIntoBytes(uchar* bitsBuff, uchar* buff,
-                                 ushort address, int len) {
+                                 unsigned short address, int len) {
     int bytesLen = (address + len + 7) / 8;
     unsigned char buffIndex = 0;
     unsigned char  bitsCount = 0;
@@ -162,12 +162,12 @@ static void ArrangeBitsIntoBytes(uchar* bitsBuff, uchar* buff,
 *
 *****************************************************************************/
 static int _2BUSReadData(reader* globalData, uchar socket, 
-                         ushort address, int len, uchar* outBuffer, int *outBufLen) {
+                         unsigned short address, int len, uchar* outBuffer, int *outBufLen) {
     int retVal = ASE_OK, counter = 0, actual;
-    ushort maxAddress = 0;
+    unsigned short maxAddress = 0;
     uchar cmdCode = 0, mode = globalData->cards[(int)socket].memCard.memType;
     uchar thisRead;
-    ushort readLen = len;
+    unsigned short readLen = len;
     uchar bitsBuff[4]; /* for 2 bus cards, 32 protected  bits */
     uchar* readBuff = outBuffer;
 
@@ -235,10 +235,10 @@ static int _2BUSReadData(reader* globalData, uchar socket,
 /*****************************************************************************
 *
 *****************************************************************************/
-static int _2BUSWriteData(reader* globalData, uchar socket, ushort address,
+static int _2BUSWriteData(reader* globalData, uchar socket, unsigned short address,
                           uchar* data, int len, uchar* outBuffer, int *outBufLen) {
     int retVal = ASE_OK, counter = 0, writeLen = len;
-    ushort maxAddress = 0;
+    unsigned short maxAddress = 0;
     uchar cmdCode = 0, thisWrite;
     uchar mode = globalData->cards[(int)socket].memCard.memType;
 
@@ -429,7 +429,7 @@ static int _2BUSChangePSC (reader* globalData, uchar socket,
 *
 *****************************************************************************/
 static int _3BUSExecInCommand (reader* globalData, uchar socket, uchar mode,
-                               uchar cmdCode, ushort address, uchar len,
+                               uchar cmdCode, unsigned short address, uchar len,
                                uchar* outBuffer, int *outBufLen) {
     int retVal, actual = 0;
 
@@ -453,7 +453,7 @@ static int _3BUSExecInCommand (reader* globalData, uchar socket, uchar mode,
 *
 *****************************************************************************/
 static int _3BUSExecOutCommand (reader* globalData, uchar socket, 
-                                uchar cmdCode, ushort address, 
+                                uchar cmdCode, unsigned short address, 
                                 uchar* data, uchar len,
                                 uchar* outBuffer, int *outBufLen) {
     int retVal;                      
@@ -472,12 +472,12 @@ static int _3BUSExecOutCommand (reader* globalData, uchar socket,
 *
 *****************************************************************************/
 static int _3BUSReadData(reader* globalData, uchar socket, 
-                         ushort address, int len, uchar* outBuffer, int *outBufLen) {
+                         unsigned short address, int len, uchar* outBuffer, int *outBufLen) {
     int retVal = ASE_OK, counter = 0, actual, i;
-    ushort maxAddress = 0;
+    unsigned short maxAddress = 0;
     uchar cmdCode = 0, mode = globalData->cards[(int)socket].memCard.memType;
     uchar thisRead;
-    ushort readLen = len;
+    unsigned short readLen = len;
     uchar temp[600];
 
 
@@ -551,10 +551,10 @@ static int _3BUSReadData(reader* globalData, uchar socket,
 /*****************************************************************************
 *
 *****************************************************************************/
-static int _3BUSWriteData(reader* globalData, uchar socket, ushort address,
+static int _3BUSWriteData(reader* globalData, uchar socket, unsigned short address,
                           uchar* data, int len, uchar* outBuffer, int *outBufLen) {
     int retVal = ASE_OK, counter = 0, writeLen = len;
-    ushort maxAddress = 0;
+    unsigned short maxAddress = 0;
     uchar cmdCode = 0, thisWrite;
     uchar mode = globalData->cards[(int)socket].memCard.memType;
 
@@ -747,7 +747,7 @@ static int _3BUSChangePSC (reader* globalData, uchar socket,
 *
 *****************************************************************************/
 static int I2CExecInCommand (reader* globalData, uchar socket, 
-                             uchar cmdCode, ushort address, uchar len,
+                             uchar cmdCode, unsigned short address, uchar len,
                              uchar* outBuffer, int *outBufLen) {
     int retVal, actual = 0;
 
@@ -765,7 +765,7 @@ static int I2CExecInCommand (reader* globalData, uchar socket,
 *
 *****************************************************************************/
 static int I2CExecOutCommand (reader* globalData, uchar socket, 
-                              uchar cmdCode, ushort address, 
+                              uchar cmdCode, unsigned short address, 
                               uchar* data, uchar len,
                               uchar* outBuffer, int *outBufLen) {
     int retVal;                      
@@ -783,11 +783,11 @@ static int I2CExecOutCommand (reader* globalData, uchar socket,
 *
 *****************************************************************************/
 static int I2CReadData(reader* globalData, uchar socket, 
-                       ushort address, int len, uchar* outBuffer, int *outBufLen) {
+                       unsigned short address, int len, uchar* outBuffer, int *outBufLen) {
     int retVal = ASE_OK, counter = 0;
     uchar cmdCode = 0;
     uchar thisRead;
-    ushort readLen = len;
+    unsigned short readLen = len;
 
     
     cmdCode = 0xA0;
@@ -813,7 +813,7 @@ static int I2CReadData(reader* globalData, uchar socket,
 /*****************************************************************************
 *
 *****************************************************************************/
-static int I2CWriteData(reader* globalData, uchar socket, ushort address,
+static int I2CWriteData(reader* globalData, uchar socket, unsigned short address,
                         uchar* data, int len, uchar* outBuffer, int *outBufLen) {
     int retVal = ASE_OK, counter = 0, writeLen = len;
     uchar cmdCode = 0, thisWrite;
@@ -876,7 +876,7 @@ static int VerifyAPDUValidStructure(uchar* inBuf, int inBufLen) {
 static int SendMemoryCommand (reader* globalData, uchar socket, 
                               uchar* inBuf, int inBufLen, uchar* outBuffer, int *outBufLen) {
     uchar INS = inBuf[1];
-    ushort address;
+    unsigned short address;
     char cardType = globalData->cards[(int)socket].memCard.protocolType;
     int retVal = ASE_OK;
 

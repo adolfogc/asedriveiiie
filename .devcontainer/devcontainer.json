@@ -1,0 +1,9 @@
+{
+    "name": "asedriveiiie-dev",
+    "dockerFile": "Dockerfile",
+    "customizations": {
+        "vscode": {
+            "extensions": []
+        }
+    }
+}

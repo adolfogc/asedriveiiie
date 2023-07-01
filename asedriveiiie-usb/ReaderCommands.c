@@ -703,7 +703,7 @@ int PPSTransact (reader* globalData, char socket, char* buffer, int len, char* o
 *
 *****************************************************************************/
 int MemoryCardTransact (reader* globalData, char socket, 
-                        char cmdType, uchar command, ushort address, uchar len,
+                        char cmdType, uchar command, unsigned short address, uchar len,
                         uchar* data, char* outBuf, int* outBufLen) {
     char cmd[BULK_BUFFER_SIZE];
     uchar checksum, readByte;

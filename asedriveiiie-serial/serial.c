@@ -4,7 +4,7 @@
 #include <fcntl.h>
 #include <assert.h>
 #include <termios.h>
-#include <sys/signal.h>
+#include <signal.h>
 #include <sys/types.h>
 #include <sys/time.h>
 #include <sys/ioctl.h>
